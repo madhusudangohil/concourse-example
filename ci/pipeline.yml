@@ -1,0 +1,14 @@
+---
+resources:
+  - name: project-src
+    type: git
+    source:
+      uri: https://github.com/madhusudangohil/concourse-example.git
+      branch: master
+jobs:
+  - name: unit-tests
+    plan:
+    - get: project-src
+      trigger: true
+    - task: run-unit-tests
+      file: project-src/ci/tasks/unit-tests.yml
