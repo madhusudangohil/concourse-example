@@ -9,7 +9,7 @@ class SessionRepository {
                     resolve({id: 100, name: 'Client1'});
                 else
                     reject('not found');
-            }, 5000);
+            }, 100);
         });
         return promise;        
     }
