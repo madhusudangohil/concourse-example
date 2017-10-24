@@ -4,7 +4,7 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: node
+    repository: codelovers/nodejs-aws-cli
     tag: 6.10.0
 
 inputs:
