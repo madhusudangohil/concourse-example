@@ -22,4 +22,6 @@ cd -
 cd project-src/src
 pwd
 
+npm install gulp
+
 gulp deploy
