@@ -5,6 +5,7 @@ set -o nounset
 set -o xtrace
 
 mkdir ~/.aws
+cd ~/.aws
 echo '[profile default]
 region = us-west-2
 role_arn = arn:aws:iam::300813158921:role/GroupAccess-Developers-Channels
