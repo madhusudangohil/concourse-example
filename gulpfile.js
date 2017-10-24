@@ -12,8 +12,10 @@ gulp.task('clean', function () {
 gulp.task('js', function () {
     //this is the name of your main function file
     return gulp.src([
-            'index.js',
-            '../package.json'])
+            './src/index.js',
+	    './src/sessionRepository.js',
+            './src/sms.js',
+            'package.json'])
         .pipe(gulp.dest('dist/'));
 });
 
