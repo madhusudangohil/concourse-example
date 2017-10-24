@@ -1,6 +1,6 @@
 ﻿module.exports = {
     region: 'us-west-2',
-    profile: 'dev',
+    profile: 'default',
     handler: 'index.handler',
     assumedRole: 'arn:aws:iam::300813158921:role/GroupAccess-Developers-Channels',
     role: 'arn:aws:iam::300813158921:role/ch2-sms-lambda-role',
