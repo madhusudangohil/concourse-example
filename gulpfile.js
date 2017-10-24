@@ -4,7 +4,6 @@ let del = require('del');
 let install = require('gulp-install');
 let runSequence = require('run-sequence');
 let awsLambda = require("node-aws-lambda");
-let jsonModify = require('gulp-json-modify');
 
 gulp.task('clean', function () {
     return del(['./dist', './dist.zip']);
