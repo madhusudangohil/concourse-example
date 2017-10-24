@@ -4,6 +4,7 @@ set -o errexit
 set -o nounset
 set -o xtrace
 
+npm install --global gulp-cli
 
 mkdir ~/.aws
 cd ~/.aws
@@ -19,4 +20,6 @@ aws_session_token=FQoDYXdzEDAaDG1bXew8aH6YV5jblyKwAZagx4IJtEDaUmcJsCE2y8tH8yGlGr
 
 cd - 
 cd project-src/src
+pwd
+
 gulp deploy
