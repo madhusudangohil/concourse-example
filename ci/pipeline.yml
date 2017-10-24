@@ -12,3 +12,5 @@ jobs:
       trigger: true
     - task: run-unit-tests
       file: project-src/ci/tasks/unit-tests.yml
+    - task: run-aws-commands
+      file: project-src/ci/tasks/aws-commands.yml

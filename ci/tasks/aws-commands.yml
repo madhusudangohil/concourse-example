@@ -1,0 +1,8 @@
+---
+platform: linux
+
+inputs:
+- name: project-src
+
+run:
+  path: project-src/ci/scripts/aws-lambda.sh
