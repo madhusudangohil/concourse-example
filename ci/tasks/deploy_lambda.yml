@@ -1,0 +1,13 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: berrycloud/maven-aws-cli-node    
+    
+inputs:
+- name: project-src
+
+run:
+  path: project-src/ci/scripts/aws-lambda.sh

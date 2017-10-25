@@ -1,0 +1,13 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: berrycloud/maven-aws-cli-node    
+    
+inputs:
+- name: concourse-example
+
+run:
+  path: concourse-example/ci/scripts/update_aws.sh

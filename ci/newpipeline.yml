@@ -1,0 +1,50 @@
+---
+resource_types:
+  - name: npm-cache
+    type: docker-image
+    source:
+      repository: ymedlop/npm-cache-resource
+      tag: latest
+
+resources:
+  - name: concourse-example
+    type: git
+    source: &repo-source
+      uri: https://github.com/madhusudangohil/concourse-example.git
+      branch: master
+  - name: dependency-cache
+    type: npm-cache
+    source:
+      <<: *repo-source
+      paths:
+        - package.json
+     
+ jobs:
+  - name: Install dependencies
+    plan:
+      - get: concourse-example
+        trigger: true
+      - get: dependency-cache
+  - name: Run tests
+    plan:
+      - get: concourse-example
+        trigger: true
+        passed: [Install dependencies]
+      - get: dependency-cache
+        passed: [Install dependencies]
+      - task: run the test suite
+        file: concourse-example/ci/tasks/run_tests.yml
+  - name: set aws credentials
+    plan:
+      - get: concourse-example
+        trigger: true
+        passed: [Run tests] 
+      - task: update credentials
+        file: concourse-example/ci/tasks/update_aws.yml
+  - name: deploy lambda
+    plan:
+    - get: concourse-example
+      passed: [set aws credentials] 
+      trigger: true
+    - task: run-aws-commands
+      file: concourse-example/ci/tasks/deploy_lambda.yml
