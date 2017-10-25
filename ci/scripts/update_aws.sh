@@ -6,7 +6,7 @@ set -o xtrace
 
 ls
 
-mkdir aws-cred
+mkdir aws-cred -p dir
 
 echo '[profile default]
 region = us-west-2
