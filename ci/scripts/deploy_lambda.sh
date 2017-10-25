@@ -10,4 +10,6 @@ cd concourse-example
 
 npm install
 
+ls ~/.aws
+
 gulp deploy
