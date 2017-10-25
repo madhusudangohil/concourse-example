@@ -10,4 +10,4 @@ inputs:
 - name: concourse-example
 
 run:
-  path: concourse-example/ci/scripts/aws-lambda.sh
+  path: concourse-example/ci/scripts/deploy_lambda.sh
