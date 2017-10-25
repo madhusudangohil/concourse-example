@@ -6,6 +6,9 @@ set -o xtrace
 
 npm install --global gulp-cli
 
+mkdir ~/.aws
+mv aws-cred/* ~/.aws/
+
 cd concourse-example
 
 npm install

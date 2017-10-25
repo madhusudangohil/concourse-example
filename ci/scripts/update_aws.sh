@@ -4,7 +4,7 @@ set -o errexit
 set -o nounset
 set -o xtrace
 
-mkdir ~/.aws
+mkdir aws-cred
 
 echo '[profile default]
 region = us-west-2

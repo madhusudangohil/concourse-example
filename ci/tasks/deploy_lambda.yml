@@ -8,7 +8,7 @@ image_resource:
     
 inputs:
 - name: concourse-example
-- name: ~/.aws
+- name: aws-cred
 
 run:
   path: concourse-example/ci/scripts/deploy_lambda.sh

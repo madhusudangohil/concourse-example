@@ -10,7 +10,7 @@ inputs:
 - name: concourse-example
 
 outputs:
-- name: ~/.aws
+- name: aws-cred
 
 run:
   path: concourse-example/ci/scripts/update_aws.sh
