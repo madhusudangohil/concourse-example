@@ -12,5 +12,12 @@ jobs:
       trigger: true
     - task: run-unit-tests
       file: project-src/ci/tasks/unit-tests.yml
+      
+  - name: deploy-lambda
+    plan:
+    - get: project-src
+      passed: 
+         - unit-tests 
+      trigger: true
     - task: run-aws-commands
       file: project-src/ci/tasks/aws-commands.yml
