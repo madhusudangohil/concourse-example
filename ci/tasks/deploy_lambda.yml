@@ -8,6 +8,7 @@ image_resource:
     
 inputs:
 - name: concourse-example
+- name: ~/.aws
 
 run:
   path: concourse-example/ci/scripts/deploy_lambda.sh
