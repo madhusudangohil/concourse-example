@@ -9,5 +9,8 @@ image_resource:
 inputs:
 - name: concourse-example
 
+outputs:
+- name: ~/.aws
+
 run:
   path: concourse-example/ci/scripts/update_aws.sh
