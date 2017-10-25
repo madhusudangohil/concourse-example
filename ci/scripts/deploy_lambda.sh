@@ -6,6 +6,8 @@ set -o xtrace
 
 npm install --global gulp-cli
 
+cd concourse-example
+
 npm install
 
 gulp deploy
