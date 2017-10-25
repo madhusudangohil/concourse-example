@@ -10,4 +10,4 @@ inputs:
 - name: concourse-example
 
 run:
-  path: project-src/ci/scripts/run_test.sh
+  path: concourse-example/ci/scripts/run_test.sh

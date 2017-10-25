@@ -7,7 +7,7 @@ image_resource:
     repository: berrycloud/maven-aws-cli-node    
     
 inputs:
-- name: project-src
+- name: concourse-example
 
 run:
-  path: project-src/ci/scripts/aws-lambda.sh
+  path: concourse-example/ci/scripts/aws-lambda.sh
