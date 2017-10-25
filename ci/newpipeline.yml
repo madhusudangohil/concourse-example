@@ -18,33 +18,36 @@ resources:
       <<: *repo-source
       paths:
         - package.json
-     
- jobs:
-  - name: Install dependencies
+jobs:
+  - name: install-dependencies
     plan:
       - get: concourse-example
         trigger: true
       - get: dependency-cache
-  - name: Run tests
+  - name: run-tests
     plan:
       - get: concourse-example
         trigger: true
-        passed: [Install dependencies]
+        passed:
+           - install-dependencies
       - get: dependency-cache
-        passed: [Install dependencies]
+        passed: 
+           - install-dependencies
       - task: run the test suite
         file: concourse-example/ci/tasks/run_tests.yml
-  - name: set aws credentials
+  - name: set-aws
     plan:
       - get: concourse-example
         trigger: true
-        passed: [Run tests] 
+        passed: 
+           - run-tests 
       - task: update credentials
         file: concourse-example/ci/tasks/update_aws.yml
   - name: deploy lambda
     plan:
     - get: concourse-example
-      passed: [set aws credentials] 
       trigger: true
+      passed:
+        - set-aws      
     - task: run-aws-commands
       file: concourse-example/ci/tasks/deploy_lambda.yml
