@@ -14,9 +14,9 @@ role_arn = arn:aws:iam::300813158921:role/GroupAccess-Developers-Channels
 source_profile = default' > config
 
 echo '[default]
-aws_access_key_id=ASIAIN4O3NH73IWMPRXQ
-aws_secret_access_key=iiSyV0OIPicD4Pi+RuuGdF7RpOaBmeM6p0J0JSBt
-aws_session_token=FQoDYXdzEEcaDJmhvAC42AL3bgxVXyKwAYlvr/yI0z3s4WR8kMaidKxcxmhADVS8rwboWM/TQ7TVnoaHpg/e4keIrKJcbn9kArzhLRYl50MGzH85jB64AKsczjqP852rWM2wgs6oL4NGcniCXsMM22dTce6rFdtaPj03solgij/w0pWgaGmu0YWtHzVNb3mQ0s0yiP0ngNFvPLStJ4Rw6/AwTORZSJZb1Euw+Jj/DocCTVnpwzutR5OmZNF4R02HcjKmlNYxzC76KKS6ws8F' > credentials
+aws_access_key_id=ASIAJYYMWURL6QW5S7KA
+aws_secret_access_key=JaCk+NB47sTJk6aoqCRCSa77HriTa0d6J1j7lM9E
+aws_session_token=FQoDYXdzEL///////////wEaDJk29I6D4sFCely7aiKwAW48aXvPzbFgoEk9JT4Zu/MDE/wkukKv/1zbnrD+AYWNav9uXqtZSakzfVcdIGV1PFgWKSRWjUDt5T831OUMbunpQEFF7QYsko0hD12V1WyMnFHZnptGLmbv++6WHfXYOfEB45rdDWXkMFFVSGGOMMY9fBXXWtDfc1gv5+U1ly6vJ4RO+UY21swSmuoByqfXc/RsZeuEv7iUXgIqkMd9Ci587kYqnPd1BZNKtskiEomyKMja3M8F' > credentials
 
 cd - 
 cd project-src
